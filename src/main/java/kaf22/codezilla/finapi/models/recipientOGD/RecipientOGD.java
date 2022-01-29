@@ -1,5 +1,6 @@
 package kaf22.codezilla.finapi.models.recipientOGD;
 
+import kaf22.codezilla.finapi.models.Person;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,4 +31,8 @@ public class RecipientOGD {
 
     @ManyToOne(fetch = FetchType.EAGER)
     private RecipientStatus recipientStatus;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Person person;
+
 }

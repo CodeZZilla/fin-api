@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -20,7 +21,7 @@ public class InputDocument {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime dateInput;
+    private LocalDate dateInput;
     private Long numberInput;
 
     private LocalDateTime dateOutput;

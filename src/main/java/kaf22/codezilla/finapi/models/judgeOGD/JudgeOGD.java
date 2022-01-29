@@ -1,5 +1,6 @@
 package kaf22.codezilla.finapi.models.judgeOGD;
 
+import kaf22.codezilla.finapi.models.Person;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,4 +27,7 @@ public class JudgeOGD {
 
     @ManyToOne(fetch = FetchType.EAGER)
     private TypeAct typeAct;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Person person;
 }

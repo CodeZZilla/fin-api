@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -28,10 +29,10 @@ public class MainDocument {
     @Column(name = "group_gr")
     private Integer group;
     private Integer sizeGZ;
-    private LocalDateTime dateOfEvent;
-    private LocalDateTime releaseDate;
-    private LocalDateTime dateDeterminedOGD;
-    private LocalDateTime dateOfDecision;
+    private LocalDate dateOfEvent;
+    private LocalDate releaseDate;
+    private LocalDate dateDeterminedOGD;
+    private LocalDate dateOfDecision;
     private String numberOfDecision;
     private Double subOGD;
     private String text;

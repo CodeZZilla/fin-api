@@ -1,4 +1,4 @@
-package kaf22.codezilla.finapi.models.protocol;
+package kaf22.codezilla.finapi.models.protocolItem;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,5 +22,5 @@ public class DecisionStatus {
     private String name;
 
     @OneToMany(mappedBy = "decisionStatus", cascade = CascadeType.ALL)
-    private List<Protocol> protocolList;
+    private List<ProtocolItem> protocolItemList;
 }
