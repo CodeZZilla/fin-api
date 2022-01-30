@@ -14,6 +14,7 @@ import java.util.Set;
 @Getter
 @Setter
 @ToString
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
 
     @Id
@@ -26,7 +27,6 @@ public class User {
     @JsonIgnore
     private String password;
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String photo;
 
     @ManyToMany(fetch = FetchType.EAGER)
