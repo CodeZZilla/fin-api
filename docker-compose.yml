@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=nE5kMc7JCGNqwDQM
+      - MYSQL_DATABASE=fin
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/var/lib/mysql
+
+
+  app:
+    depends_on:
+      - mysqldb
+    build: ./
+    restart: on-failure
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./files:/root/resources/user/photo/
+    stdin_open: true
+    tty: true
+
+volumes:
+  db:
