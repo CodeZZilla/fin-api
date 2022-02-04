@@ -117,6 +117,7 @@ public class AuthController {
                     userDetails.getUsername(),
                     roles));
         } catch (Exception e) {
+            System.out.println(e.getMessage());
             return new ResponseEntity<>(Map.of("code", ErrorCode.INCORRECT_LOGIN_DETAILS.getCode(),
                     "error", ErrorCode.INCORRECT_LOGIN_DETAILS.getMessage()), HttpStatus.UNAUTHORIZED);
         }
